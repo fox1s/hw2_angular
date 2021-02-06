@@ -1,14 +1,15 @@
-<form #myForm = 'ngForm' (ngSubmit)="checkForm(myForm)">
-  <div>
-    <input [(ngModel)]="state.name" [name]="state.name">
+<form [formGroup]="myForm" (ngSubmit)="checkForm(myForm)">
+   <div>
+    <input [formControl]="name">
   </div>
   <div>
-    <input [(ngModel)]="state.age" [name]="state.age">
+    <input [formControl]="age">
   </div>
   <div>
-    <input [(ngModel)]="state.city" [name]="state.city">
+    <input [formControl]="city">
   </div>
-  <button>save</button>
+
+  <button [disabled]="myForm.invalid">save</button>
 </form>
 <div>
 
