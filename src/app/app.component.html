@@ -1,1 +1,16 @@
-<app-posts></app-posts>
+<form #myForm = 'ngForm' (ngSubmit)="checkForm(myForm)">
+  <div>
+    <input [(ngModel)]="state.name" [name]="state.name">
+  </div>
+  <div>
+    <input [(ngModel)]="state.age" [name]="state.age">
+  </div>
+  <div>
+    <input [(ngModel)]="state.city" [name]="state.city">
+  </div>
+  <button>save</button>
+</form>
+<div>
+
+  <app-user *ngFor="let user of users" [user]="user"></app-user>
+</div>
