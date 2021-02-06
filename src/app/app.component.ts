@@ -8,7 +8,6 @@ import {IUsers} from './models/Users';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  state: IUsers = {name: 'name', age: 'age', city: 'city'};
   users = [];
 
 // Array<any>
